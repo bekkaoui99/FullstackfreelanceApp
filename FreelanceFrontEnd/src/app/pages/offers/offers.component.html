@@ -1,0 +1,20 @@
+<div class="offers-page">
+
+
+<div class="offer-search">
+  <h1>Find your freelance mission</h1>
+  <div class="offer-form">
+
+  </div>
+</div>
+
+<div class="offer-row">
+
+  <app-offer
+    *ngFor="let offer of offers"
+  [offer]="offer"
+  >
+  </app-offer>
+
+</div>
+</div>

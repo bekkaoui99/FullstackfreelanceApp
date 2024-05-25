@@ -1,0 +1,85 @@
+<div class="container mt-5">
+
+  <div class="row justify-content-center">
+
+    <div class="col-8">
+
+      <div class="border shadow p-5 mb-5 bg-body rounded">
+
+        <div *ngIf="registered"  class="alert alert-success alert-dismissible fade show" role="alert">
+          freelancer was created successfully
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+
+        <div *ngIf="exception.message.length > 0"  class="alert alert-danger alert-dismissible fade show" role="alert">
+          {{exception.message}}
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+
+        <form (ngSubmit)="register()">
+          <div class="d-flex justify-content-center mb-4">
+            <h1>Freelance Registration</h1>
+          </div>
+          <div class="row mb-3">
+            <div class="form-group col-md-6">
+              <input type="text" class="form-control" name="firstName" id="firstName" [(ngModel)]="formRegister.firstName" placeholder="First Name">
+            </div>
+            <div class="form-group col-md-6">
+              <input type="text" class="form-control" name="lastName" id="lastName" [(ngModel)]="formRegister.lastName" placeholder="Last Name">
+            </div>
+          </div>
+
+
+          <div class="row mb-3">
+            <div class="form-group col-md-6">
+              <input type="text" class="form-control" name="phoneNumber" id="phoneNumber" [(ngModel)]="formRegister.phoneNumber" placeholder="Phone Number">
+            </div>
+            <div class="form-group col-md-6">
+              <input type="text" name="userName" placeholder="User Name" [(ngModel)]="formRegister.userName" class="form-control" id="userName" >
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <div class="form-group col-md-6">
+              <input type="text" class="form-control" name="city" id="city" [(ngModel)]="formRegister.city" placeholder="Your City">
+            </div>
+            <div class="form-group col-md-6">
+              <input type="text" name="jobTitle" placeholder="Your Job Title" [(ngModel)]="formRegister.jobTitle" class="form-control"  >
+            </div>
+          </div>
+
+          <div class="form-group mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="text" name="email" [(ngModel)]="formRegister.email" class="form-control" id="email" >
+          </div>
+
+          <div class="form-group  mb-3">
+            <label for="Password" class="form-label">Password</label>
+            <input type="password" name="password"  [(ngModel)]="formRegister.password" class="form-control" id="Password">
+          </div>
+
+          <div class="form-group  mb-3">
+            <label for="ConfirmationPassword" class="form-label">Confirmation Password</label>
+            <input type="password" name="confirmationPassword"  [(ngModel)]="formRegister.confirmationPassword" class="form-control" id="ConfirmationPassword">
+          </div>
+
+
+          <div class="d-flex justify-content-between mt-4">
+            <div>
+              <button type="submit" class="btn btn-primary mx-1">Submit</button>
+              <button type="button" class="btn btn-dark mx-1" (click)="clearForm()">Clear</button>
+            </div>
+
+            <button (click)="navigateToLogin()" type="button" class="btn btn-dark mx-1">Login</button>
+          </div>
+
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

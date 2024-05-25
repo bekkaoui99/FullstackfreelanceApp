@@ -1,0 +1,54 @@
+<div class="container mt-5">
+
+  <div class="row justify-content-center">
+
+    <div class="col-8">
+
+      <div class="border shadow p-5 mb-5 bg-body rounded">
+
+        <div *ngIf="created"  class="alert alert-success alert-dismissible fade show" role="alert">
+          offer was created successfully
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+
+        <form (ngSubmit)="createOffer()">
+          <div class="d-flex justify-content-center mb-2">
+            <h1>Create New Offer</h1>
+          </div>
+
+          <div class="form-group mb-3">
+            <label for="Title" class="form-label">Offer Title</label>
+            <input type="text" name="title" [(ngModel)]="createOfferForm.title" class="form-control" id="Title" >
+          </div>
+
+          <div class="form-group mb-3">
+            <label for="Description" class="form-label">Offer Description</label>
+            <input type="text" name="description" [(ngModel)]="createOfferForm.description" class="form-control" id="Description" >
+          </div>
+
+
+
+          <select  class="form-control mb-3">  [(ngModel)]="createOfferForm.experienceLevel">
+            <option *ngFor="let level of experienceLevels" [value]="level">{{ level }}</option>
+          </select>
+
+
+
+          <div class="d-flex justify-content-between mt-4">
+            <div>
+              <button type="submit" class="btn btn-primary mx-1">Submit</button>
+              <button type="button" class="btn btn-dark mx-1" (click)="clearForm()">Clear</button>
+            </div>
+
+          </div>
+
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

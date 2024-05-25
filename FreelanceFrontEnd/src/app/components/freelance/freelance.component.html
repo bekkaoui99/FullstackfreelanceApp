@@ -1,0 +1,22 @@
+<div class="freelance-card" *ngIf="freelance">
+
+  <div class="freelance-image">
+    <img src="assets/client1.jpg" class="" alt="...">
+  </div>
+
+  <div class="freelance-information">
+    <p class="userName">{{freelance.userName | titlecase}}</p>
+    <h2 class="job-title">{{freelance.jobTitle | titlecase}}</h2>
+    <div class="city">
+      <i class="fa-solid fa-location-dot"></i>
+      <p class="city">{{freelance.city}}</p>
+    </div>
+
+
+    <div class="technologies">
+      <p *ngFor="let technology of freelance.technologyResponses">{{technology.name}}</p>
+    </div>
+
+  </div>
+
+</div>

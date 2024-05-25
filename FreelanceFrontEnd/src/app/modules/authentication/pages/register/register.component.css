@@ -1,0 +1,37 @@
+.registration-row{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.freelance-registration ,
+.company-registration{
+  margin-top: 40px;
+  padding: 20px;
+  border-radius: 25px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 50%);
+  max-width: 45%;
+}
+
+.freelance-image ,
+.company-image{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.freelance-image img ,
+.company-image img{
+  max-width: 100%;
+}
+
+
+.registration-title{
+  margin-top: 20px;
+  text-align: center;
+}
+.button-title{
+  font-size: 15px;
+  text-align: center;
+}
+

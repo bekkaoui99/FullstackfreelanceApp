@@ -1,0 +1,9 @@
+.freelance-row{
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+.freelance-header{
+  padding-top: 30px;
+  text-align: center;
+}

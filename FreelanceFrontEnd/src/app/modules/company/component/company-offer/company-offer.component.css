@@ -1,0 +1,53 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.offer-card{
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 50%);
+  transition: 0.3s linear;
+  border-radius: 30px;
+  padding: 25px;
+  width: 100%;
+  margin-bottom: 40px;
+
+}
+.offer-title{
+  color: #457b9d;
+  margin-bottom: 10px;
+}
+.technologies{
+  display: flex;
+  justify-content: start;
+  gap: 20px;
+  align-items: center;
+}
+
+.technologies p{
+  color: white;
+  background-color: #457b9d;
+  padding: 9px 20px;
+  border-radius: 15px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.offer-info{
+
+  display: flex;
+  justify-content: start;
+  gap: 20px;
+}
+.offer-description{
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.company{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.company i{
+  font-size: 20px;
+}

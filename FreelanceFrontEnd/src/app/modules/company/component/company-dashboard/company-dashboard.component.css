@@ -1,0 +1,28 @@
+.dashboard{
+  max-height: 200px;
+  background-color: #edf2f4;
+
+  padding-left: 100px;
+  padding-right: 100px;
+}
+.greeting{
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.dashboard-links{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 20px;
+
+}
+.dashboard-link{
+  padding: 10px 20px;
+
+  border-radius: 15px;
+  background-color: #457b9d;
+}
+.dashboard-link a{
+text-decoration: none;
+  color: white;
+}

@@ -1,0 +1,11 @@
+.offers-page{
+  background-color: #edf2f4;
+}
+.offer-search h1{
+  padding-top: 60px;
+  text-align: center;
+}
+.offer-row{
+  width: 70%;
+  margin: 50px auto;
+}

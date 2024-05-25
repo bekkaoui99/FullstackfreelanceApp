@@ -1,0 +1,17 @@
+<div class="offer-card" *ngIf="offer">
+
+  <h1 class="offer-title">{{offer.title}}</h1>
+  <div class="technologies">
+    <p class="" *ngFor="let technology of offer.offerTechnologies">{{technology}}</p>
+  </div>
+  <P class="offer-description">{{offer.description}}</P>
+  <div class="offer-info">
+    <p>published at: {{offer.publishDate | date}}</p>
+    <p>Level: {{offer.experienceLevel}}</p>
+    <div class="company">
+      <i class="fa-regular fa-building"></i>
+      <p>{{offer.companyName}}</p>
+    </div>
+
+  </div>
+</div>

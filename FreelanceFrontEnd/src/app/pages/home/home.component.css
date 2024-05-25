@@ -1,0 +1,20 @@
+.landing .title{
+  font-size: 55px;
+}
+.color-title{
+  color: #3a6cf4;
+}
+
+.landing-btn{
+  color: white;
+  padding: 15px 20px;
+  border-radius: 10px;
+  background-color: #3a6cf4;
+  border: none;
+}
+.landing-btn:last-child{
+  margin-left: 15px;
+}
+.list-item p {
+  font-size: 20px;
+}
