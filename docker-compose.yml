@@ -18,7 +18,7 @@ services:
 
 
   FreelanceRestApi:
-    image:  hamzabekkaoui/freelancerestapi:2.0.0
+    image:  hamzabekkaoui/freelance-rest-api:1.0.0
     container_name: FreelanceRestApi
     environment:
       SPRING_DATASOURCE_URL: ${DATABASE_URL}
@@ -36,7 +36,7 @@ services:
 
   FreelanceUi:
     container_name: FreelanceUi
-    image:  hamzabekkaoui/freelanceui:2.0.0
+    image:  hamzabekkaoui/freelance-rest-api:1.0.0
     ports:
       - "4201:80"
     expose:
