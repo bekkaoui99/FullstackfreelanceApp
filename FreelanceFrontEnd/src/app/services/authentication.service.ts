@@ -9,11 +9,14 @@ import {FreelanceRegistrationRequest} from "../types/FreelanceRegistration-reque
 import {TokenService} from "./token.service";
 import {jwtDecode} from "jwt-decode";
 import {Router} from "@angular/router";
+import {environment} from "../../environments/environment";
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthenticationService {
+
+  private URL = environment.apiUrl;
   public authenticatedSubject: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
   public roleSubject: BehaviorSubject<string> = new BehaviorSubject<string>("");
 
@@ -89,16 +92,15 @@ export class AuthenticationService {
   }
 
   public login(loginRequest:LoginRequest):Observable<LoginResponse>{
-    return this.http.post<LoginResponse>("auth/login" , loginRequest);
-
+    return this.http.post<LoginResponse>(`${this.URL}/auth/login` , loginRequest);
   }
 
   public companyRegistration(companyRegistrationRequest:CompanyRegistrationRequest):Observable<CompanyRegistrationRequest>{
-    return this.http.post<CompanyRegistrationRequest>("auth/companyRegistration" , companyRegistrationRequest);
+    return this.http.post<CompanyRegistrationRequest>(`${this.URL}/auth/companyRegistration` , companyRegistrationRequest);
   }
 
   public freelanceRegistration(freelanceRegistrationRequest:FreelanceRegistrationRequest):Observable<FreelanceRegistrationRequest>{
-    return this.http.post<FreelanceRegistrationRequest>("auth/freelanceRegistration" , freelanceRegistrationRequest);
+    return this.http.post<FreelanceRegistrationRequest>(`${this.URL}/auth/freelanceRegistration` , freelanceRegistrationRequest);
   }
 
 }
