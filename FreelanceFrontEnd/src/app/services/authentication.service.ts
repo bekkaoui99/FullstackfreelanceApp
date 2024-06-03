@@ -10,11 +10,14 @@ import {TokenService} from "./token.service";
 import {jwtDecode} from "jwt-decode";
 import {Router} from "@angular/router";
 import {environment} from "../../environments/environment";
+import {JwtCustomPayload} from "../types/JwtCustomPayload";
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthenticationService {
+
+
 
   private URL = environment.apiUrl;
   public authenticatedSubject: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
@@ -87,7 +90,7 @@ export class AuthenticationService {
     if (!token) {
       return null;
     }
-    const decoded = jwtDecode(token);
+    const decoded = jwtDecode(token) as JwtCustomPayload;
     return decoded ? decoded.role : null;
   }
 
