@@ -1,24 +1,26 @@
 version: '3.8'
 
 services:
+
   FreelanceAppDatabase:
     image: mysql:8.2.0
     container_name: FreelanceAppDatabase
     environment:
+      MYSQL_ROOT_PASSWORD: password
       MYSQL_DATABASE: ${DATABASE_NAME}
       MYSQL_USER: ${DATABASE_USERNAME}
       MYSQL_PASSWORD: ${DATABASE_PASSWORD}
     ports:
       - "3309:3306"
     volumes:
-      - mysql-data:/var/lib/mysql
+      - ./mysql-data:/var/lib/mysql
     restart: unless-stopped
     networks:
       - freelance-app
 
 
   FreelanceRestApi:
-    image:  hamzabekkaoui/freelance-rest-api:1.0.0
+    image:  hamzabekkaoui/freelance-rest-api:latest
     container_name: FreelanceRestApi
     environment:
       SPRING_DATASOURCE_URL: ${DATABASE_URL}
@@ -36,11 +38,11 @@ services:
 
   FreelanceUi:
     container_name: FreelanceUi
-    image:  hamzabekkaoui/freelance-rest-api:1.0.0
+    image:  hamzabekkaoui/freelance-frontend:latest
     ports:
       - "4201:80"
     expose:
-      - "80"
+      - "4201"
     networks:
       - freelance-app
     depends_on:
