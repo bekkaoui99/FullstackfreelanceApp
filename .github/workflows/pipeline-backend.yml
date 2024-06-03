@@ -27,7 +27,7 @@ jobs:
           distribution: 'corretto'
 
       - name: Set execute permission for Maven wrapper
-        run: sudo chmod +x uirshop-backend/mvnw
+        run: sudo chmod +x FreelanceRestApi/mvnw
 
       - name: Compile project
         run: |
@@ -53,7 +53,7 @@ jobs:
           distribution: 'corretto'
 
       - name: Set execute permission for Maven wrapper
-        run: sudo chmod +x uirshop-backend/mvnw
+        run: sudo chmod +x FreelanceRestApi/mvnw
 
 
       - name: Build project
@@ -82,7 +82,7 @@ jobs:
           distribution: 'corretto'
 
       - name: Set execute permission for Maven wrapper
-        run: sudo chmod +x uirshop-backend/mvnw
+        run: sudo chmod +x FreelanceRestApi/mvnw
 
 
       - name: Extract project version
